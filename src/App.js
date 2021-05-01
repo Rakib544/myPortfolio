@@ -3,7 +3,9 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './components/Home/Home/Home';
 import Navbar from './components/Home/Navbar/Navbar';
 import Sidebar from './components/Home/Navbar/Sidebar/Sidebar';
-import Backdrop from './components/Home/Navbar/Backdrop/Backdrop'
+import Backdrop from './components/Home/Navbar/Backdrop/Backdrop';
+
+import './App.css'
 
 const App = () => {
   const [toggleSlide, setToggleSlide] = useState(false)

@@ -1,22 +1,20 @@
-.banner{
-    
+.banner {
+    padding: 10px 0 80px;
 }
-
 .banner-title {
     font-size: 50px;
     color: #fff;
-    margin: 80px 0 5px;
 }
 
 .banner-name{
-    font-size: 80px;
+    font-size: 90px;
     color: #fff;
 }
 
 .banner-text {
     font-size: 18px;
-    margin: 40px 0;
-    color: #858792;
+    margin: 30px 0;
+    color: #f4f4f4;
 }
 
 .resume-button {
@@ -32,6 +30,7 @@
     cursor: pointer;
     transition: 0.4s;
     margin-bottom: 30px;
+    display: none;
 }
 
 .resume-button:hover {
@@ -40,16 +39,26 @@
 
 .grid-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     height: 100%;
 }
 
 .banner-grid-left {
-   padding-left: 100px;
+    padding-left: 80px;
+    order: 2;
+}
+.banner-grid-right {
+    order: 1;
 }
 
 .banner-grid-right img{
-    display: flex;
-    align-items: center;
+    height: 450px;
+    object-fit: contain;
+}
+
+@media (max-width: 960px) {
+    .grid-container {
+        flex-direction: column;
+    }
 }
