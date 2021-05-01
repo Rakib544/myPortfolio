@@ -14,7 +14,7 @@ form {
     color: #fff;
     outline: 0;
     box-shadow: none;
-    transition: .7s;
+    transition: .7s ease-in-out;
     font-family: 'Poppins', sans-serif;
 }
 

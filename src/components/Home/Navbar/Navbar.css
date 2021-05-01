@@ -27,11 +27,20 @@
 
 .navbar-links > li > a {
     text-decoration: none;
-    color: #fff;
+    color: #858792;
     font-size: 1.1rem;
     display: flex;
     align-items: center;
     font-family: 'Poppins', sans-serif;
+    transition: 0.5s;
+}
+
+.navbar-links > li > a:hover {
+    color: #fff;
+}
+
+.nav-btn {
+    margin-top: 20px;
 }
 
 .hamburger-menu {
@@ -58,5 +67,9 @@
 
     .hamburger-menu {
         display: flex;
+    }
+    
+    .nav-btn {
+        display: none;
     }
 }

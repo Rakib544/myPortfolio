@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Navbar.css'
+import './Navbar.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faDownload } from '@fortawesome/free-solid-svg-icons'
 
 const Navbar = ({ click }) => {
     return (
@@ -14,8 +16,10 @@ const Navbar = ({ click }) => {
                 <li><Link to="/projects">Projects</Link></li>
                 <li><Link to="/blog">Blogs</Link></li>
                 <li><Link to="/contact">Contact Me</Link></li>
-                <li><Link to="/resume">Resume</Link></li>
             </ul>
+            <div className="nav-btn">
+                <button className="resume-button">Get Resume <FontAwesomeIcon icon={faDownload} /> </button>
+            </div>
             <div className="hamburger-menu" onClick={click}>
                 <div></div>
                 <div></div>
