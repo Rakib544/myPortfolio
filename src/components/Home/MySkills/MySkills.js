@@ -1,61 +1,65 @@
 import { Container, Grid } from '@material-ui/core';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import './MySkills.css';
-import react from '../../../images/reactjs-icon.svg';
-import node from '../../../images/nodejs-icon.svg';
-import express from '../../../images/express-109.svg';
-import mongo from '../../../images/mongodb.svg';
-import material from '../../../images/material-ui-1.svg';
-import bootstrap from '../../../images/bootstrap-5-1.svg';
 
-const skills = [
-    {
-        name: 'React Js',
-        img: react
-    },
-    {
-        name: 'Express Js',
-        img: express
-    },
-    {
-        name: 'Node Js',
-        img: node
-    },
-    {
-        name: 'MongoDB',
-        img: mongo
-    },
-    {
-        name: 'Material UI',
-        img: material
-    },
-    {
-        name: 'Bootstrap',
-        img: bootstrap
-    },
+const allSkill = [
+    { name: 'React Js', width: 70, type: 'web' },
+    { name: 'Express Js', width: 70, type: 'web' },
+    { name: 'Node Js', width: 70, type: 'web' },
+    { name: 'MongoDB', width: 80, type: 'web' },
+    { name: 'Material UI', width: 85, type: 'web' },
+    { name: 'Bootstrap', width: 95, type: 'web' },
+    { name: 'Javascript', width: 75, type: 'programming' },
+    { name: 'Python', width: 60, type: 'programming' },
+    { name: 'Redux', width: 60, type: 'others' },
+    { name: 'React Native', width: 30, type: 'others' },
+    { name: 'Git', width: 70, type: 'tools' },
+    { name: 'PhotoShop', width: 75, type: 'tools' },
+    { name: 'Firebase', width: 75, type: 'tools' },
+    { name: 'Netlify', width: 80, type: 'tools' },
+    { name: 'Heroku', width: 85, type: 'tools' },
+    { name: 'SCSS', width: 75, type: 'web' }
 ]
 
+const active = {backgroundColor:  'rgb(59, 61, 73)', border: '1px solid #fff'}
+
 const MySkills = () => {
+    const [skills, setSkills] = useState([])
+    useEffect(() => {
+        const selectSkill = allSkill.filter(skill => {
+            return skill.type === 'web'
+        })
+        setSkills(selectSkill)
+    }, [])
+    
+    const changeShowSkills = type => {
+        const selectSkill = allSkill.filter(skill => skill.type === type)
+        setSkills(selectSkill)
+    }
     return (
-        <section>
+        <section className="skill-section">
             <Container>
                 <h2 className="text-center">My Skills</h2>
                 <div className='button-container'>
-                    <button className="skills-button">Web</button>
-                    <button className="skills-button">Programming</button>
-                    <button className="skills-button">Others</button>
-                    <button className="skills-button">Tools</button>
+                    <NavLink activeStyle={active} exact to="/web" className="skills-button" onClick={() => changeShowSkills('web')}>Web</NavLink>
+                    <NavLink activeStyle={active} to="/programming" className="skills-button" onClick={() => changeShowSkills('programming')}>Programming</NavLink>
+                    <NavLink activeStyle={active} to="/others" className="skills-button" onClick={() => changeShowSkills('others')}>Others</NavLink>
+                    <NavLink activeStyle={active} to="/tools" className="skills-button" onClick={() => changeShowSkills('tools')}>Tools</NavLink>
                 </div>
                 <Grid container>
                     {
                         skills.map(skill => (
-                            <Grid item lg={3} md={3} sm={4} xs={6}>
+                            <Grid item lg={6} md={6} sm={12} xs={12}>
                                 <div className="skill">
-                                    <img src={skill.img} alt={skill.name} style={{width: '100%', height: '100px'}} />
-                                    <p>{skill.name}</p>
+                                    <h2>{skill.name}</h2>
+                                    <p>{skill.width}%</p>
+                                    <span className="progress" style={{ width: `${skill.width}%` }}></span>
                                 </div>
-                            </Grid>))
+                            </Grid>
+                        ))
                     }
+
                 </Grid>
             </Container>
         </section>

@@ -4,7 +4,9 @@ import './Footer.css';
 const Footer = () => {
     return (
         <footer>
-            <p>Design and Developed by - Rakib</p>
+            <div>
+                <p>Design and Developed by - Rakib</p>
+            </div>
         </footer>
     );
 };

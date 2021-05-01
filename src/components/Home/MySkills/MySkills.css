@@ -1,10 +1,22 @@
+.skill-section {
+    margin: 100px 0;
+}
 .button-container {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 30px 0;
+    flex-wrap: wrap;
+}
+.button-container a {
+    color: #fff;
+    font-size: 15px;
+    font-family: 'Poppins', 'sans-serif';
 }
 
+.button-container a:hover {
+    text-decoration: none;
+}
 .skills-button {
     height: 50px;
     line-height: 50px;
@@ -15,33 +27,44 @@
     border-image: initial;
     color: #fff;
     font-size: 15px;
+    color: #fff;
     cursor: pointer;
     transition: 0.6s;
     margin-bottom: 30px;
     margin: 10px;
+    text-decoration: none;
 }
 
-.skills-button:hover, .skills-button:focus {
+.skills-button:hover, .skills-button:focus{
     background-color:  rgb(59, 61, 73);
-    border: 1px solid #5e5959;
+    border: 1px solid #fff;
 }
 
 .skill {
     background-color: #2A2C39;
     margin: 10px;
     padding: 10px;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    font-family: 'Poppins', 'sans-serif';
+    font-weight: bold;
 }
-
-.skill > img {
-    width: 100%;
-    display: block;
-    margin: auto;
+.skill > h2 {
+    color: #fff;
+    font-size: 16px;
 }
 
 .skill > p {
     color: #fff;
-    text-align: center;
-    padding: 10px;
-    font-size: 19px;
-    font-family: 'Poppins', 'sans-serif';
+    
+}
+.progress {
+    position: absolute;
+    top: calc(100% - 15px);
+    left: 0;
+    height: 12px;
+    background-color: #00CF5D;
+    border-radius: 20px;
 }
