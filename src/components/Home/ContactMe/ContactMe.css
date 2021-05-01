@@ -14,8 +14,9 @@ form {
     color: #fff;
     outline: 0;
     box-shadow: none;
-    transition: .7s ease-in-out;
+    transition: .4s ease-in-out;
     font-family: 'Poppins', sans-serif;
+    border-radius: 5px;
 }
 
 .text-area {
@@ -23,7 +24,7 @@ form {
 }
 
 .form-control:hover, .form-control:focus {
-    outline: 1px solid #f4f4f4;
+    border: 1px solid #fff;
 }
 
 @media (max-width: 960px) {

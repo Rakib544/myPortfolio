@@ -1,0 +1,47 @@
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.skills-button {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 30px 0 30px;
+    border-radius: 43.5px;
+    background-color: #252734;
+    border: 1px solid  rgb(59, 61, 73);
+    border-image: initial;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.6s;
+    margin-bottom: 30px;
+    margin: 10px;
+}
+
+.skills-button:hover, .skills-button:focus {
+    background-color:  rgb(59, 61, 73);
+    border: 1px solid #5e5959;
+}
+
+.skill {
+    background-color: #2A2C39;
+    margin: 10px;
+    padding: 10px;
+}
+
+.skill > img {
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+
+.skill > p {
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 19px;
+    font-family: 'Poppins', 'sans-serif';
+}
