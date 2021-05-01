@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Home from './components/Home/Home/Home';
+import Navbar from './components/Home/Navbar/Navbar';
+import Sidebar from './components/Home/Navbar/Sidebar/Sidebar';
+import Backdrop from './components/Home/Navbar/Backdrop/Backdrop'
 
-function App() {
+const App = () => {
+  const [toggleSlide, setToggleSlide] = useState(false)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <BrowserRouter>
+      <Navbar click={() => setToggleSlide(!toggleSlide)} />
+      <Backdrop show={toggleSlide} click={() => setToggleSlide(false)} />
+      <Sidebar show={toggleSlide} click={() => setToggleSlide(false)} />
+        <Switch>
+          <Route path="/">
+            <Home />
+          </Route>
+          <Route path="/about">
+
+          </Route>
+          <Route path="/projects">
+
+          </Route>
+          <Route path="/blog">
+
+          </Route>
+          <Route path="/contact">
+
+          </Route>
+        </Switch>
+      </BrowserRouter>
   );
-}
+};
 
 export default App;

@@ -1,0 +1,48 @@
+.banner{
+    height: 85vh;
+}
+
+.banner-title {
+    font-size: 50px;
+    color: #fff;
+    margin: 80px 0 5px;
+}
+
+.banner-name{
+    font-size: 80px;
+    color: #fff;
+}
+
+.banner-text {
+    font-size: 18px;
+    margin: 40px 0 60px;
+    color: #858792;
+}
+
+.resume-button {
+    height: 60px;
+    line-height: 50px;
+    padding: 0 30px 0 30px;
+    border-radius: 43.5px;
+    background-color: #252734;
+    border: 1px solid  rgb(59, 61, 73);
+    border-image: initial;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.resume-button:hover {
+    background-color: #2E303D;
+}
+
+.grid-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-left {
+   padding-left: 30px;
+}
