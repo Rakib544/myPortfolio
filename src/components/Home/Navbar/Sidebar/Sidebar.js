@@ -3,6 +3,7 @@ import React from 'react';
 import './Sidebar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
+import { faFacebookF, faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons'
 
 const Sidebar = ({ show, click }) => {
     const sideDrawerClass = ['side-drawer']
@@ -13,7 +14,7 @@ const Sidebar = ({ show, click }) => {
     return (
         <div className={`${sideDrawerClass.join(' ')}`}>
             <div className="cross-btn" onClick={click}>
-                <FontAwesomeIcon icon={faTimes}/>
+                <FontAwesomeIcon icon={faTimes} />
             </div>
             <ul className="sidebar-links" onClick={click}>
                 <li><Link to="/">Home</Link></li>
@@ -23,7 +24,9 @@ const Sidebar = ({ show, click }) => {
                 <li><Link to="/contact">Contact</Link></li>
             </ul>
             <div className="menu-icons">
-                
+                <Link className="menu-icon" to="/"><FontAwesomeIcon className="s-icon" icon={faFacebookF} /></Link>
+                <Link className="menu-icon" to="/"><FontAwesomeIcon className="s-icon" icon={faLinkedinIn} /></Link>
+                <Link className="menu-icon" to="/"> <FontAwesomeIcon className="s-icon" icon={faGithub} /></Link>
             </div>
         </div>
     );
