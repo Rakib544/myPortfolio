@@ -1,5 +1,6 @@
 .banner {
-    padding: 10px 0 80px;
+    padding-top: 10px;
+    margin-bottom: 80px;
 }
 .banner-title {
     font-size: 50px;
@@ -30,7 +31,6 @@
     cursor: pointer;
     transition: 0.4s;
     margin-bottom: 30px;
-    display: none;
 }
 
 .resume-button:hover {
@@ -46,10 +46,6 @@
 
 .banner-grid-left {
     padding-left: 80px;
-    order: 2;
-}
-.banner-grid-right {
-    order: 1;
 }
 
 .banner-grid-right img{
@@ -58,7 +54,17 @@
 }
 
 @media (max-width: 960px) {
-    .grid-container {
-        flex-direction: column;
+    .banner-grid-left {
+        padding-left: 0px;
+    }
+    .banner {
+        margin-bottom: 200px;
+        text-align: center;
+    }
+    .banner-title {
+        font-size: 45px;
+    }
+    .banner-name {
+        font-size: 70px;
     }
 }
