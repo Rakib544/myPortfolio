@@ -1,4 +1,10 @@
 .text-center {
     text-align: center;
     color: #fff;
+    font-family: 'Poppins', 'sans-serif';
+    font-size: 28px;
+}
+
+.mt-3 {
+    margin-top: 10px; 
 }

@@ -1,0 +1,37 @@
+
+form {
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.form-control {
+    width: 98%;
+    padding: 12px 20px;
+    background-color: #2A2C39;
+    border: 1px solid rgba(255,255,255,.1);
+    color: #fff;
+    outline: 0;
+    box-shadow: none;
+    transition: .7s;
+    font-family: 'Poppins', sans-serif;
+}
+
+.text-area {
+    width: 99%;
+}
+
+.form-control:hover, .form-control:focus {
+    outline: 1px solid #f4f4f4;
+}
+
+@media (max-width: 960px) {
+    form {
+        width: 100%;
+        padding: 10px;
+    }
+    .text-area {
+        width: 98%;
+    }
+}
