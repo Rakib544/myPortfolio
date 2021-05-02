@@ -1,10 +1,20 @@
 import { Grid } from '@material-ui/core';
 import React from 'react';
-import './ContactMe.css'
+import './ContactMe.css';
+import emailjs from 'emailjs-com';
 
 const ContactMe = () => {
+    const sendEmail = e => {
+        e.preventDefault();
+        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target, 'YOUR_USER_ID')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+    }
     return (
-        <section>
+        <section id="contact">
             <h1 className="text-center">Contact Me</h1>
             <Grid container>
                 <Grid item lg={3} md={3} sm={3} xs={12}>
@@ -24,7 +34,7 @@ const ContactMe = () => {
                     </div>
                 </Grid>
                 <Grid item lg={9} md={9} sm={9} xs={12}>
-                    <form>
+                    <form onSubmit={sendEmail}>
                         <Grid container>
                             <Grid item lg={6} sm={12} xs={12}>
                                 <input className="form-control mt-3" type="text" placeholder="Entre Name" />
@@ -42,7 +52,7 @@ const ContactMe = () => {
                             </Grid>
                         </Grid>
                         <textarea className="form-control text-area mt-3" placeholder="Message" rows="6"></textarea>
-                        <button className="resume-button mt-3" type="submit">Submit Message</button>
+                        <button className="send-message-btn mt-3" type="submit">Submit Message</button>
                     </form>
                 </Grid>
             </Grid>

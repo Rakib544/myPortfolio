@@ -8,7 +8,7 @@ import { faDownload } from '@fortawesome/free-solid-svg-icons'
 
 const Banner = () => {
     return (
-        <Container maxWidth="lg" className="banner">
+        <Container maxWidth="lg" className="banner" id="home">
             <Grid container className="grid-container">
                 <Box clone order={{ xs: 2, sm: 1 }}>
                     <Grid item lg={7} md={7} sm={12} xs={12}>
@@ -17,7 +17,7 @@ const Banner = () => {
                             <h1 className="banner-name">Rakib</h1>
                             <p className="banner-text">MERN stack web developer</p>
                             <p className="banner-text">A self motivated web developer. I have a deep interest in Javascript. I developed web applications. My core skills is based on Javascript and I love to solve problems using Javascript.</p>
-                            <button className="resume-button">Get Resume  <FontAwesomeIcon icon={faDownload} /></button>
+                            <a href="https://drive.google.com/uc?export=download&id=1eUvphegNNU-4YWLSw6HIe-vj9isQICKn" target='_blank' rel="noreferrer" className="resume-button">Get Resume  <FontAwesomeIcon icon={faDownload} /></a>
                         </div>
                     </Grid>
                 </Box>

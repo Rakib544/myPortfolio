@@ -11,14 +11,14 @@ const Navbar = ({ click }) => {
                 <h2>Rakib</h2>
             </div>
             <ul className="navbar-links">
-                <li><Link exact to="">Home</Link></li>
+                <li><a href="#home">Home</a></li>
                 <li><Link to="#about">About</Link></li>
-                <li><Link to="/projects">Projects</Link></li>
-                <li><Link to="/blog">Blogs</Link></li>
-                <li><Link to="/contact">Contact Me</Link></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#blogs">Blogs</a></li>
+                <li><a href="#contact">Contact Me</a></li>
             </ul>
             <div className="nav-btn">
-                <button className="resume-button">Get Resume <FontAwesomeIcon icon={faDownload} /> </button>
+            <a href="https://drive.google.com/uc?export=download&id=1eUvphegNNU-4YWLSw6HIe-vj9isQICKn" target='_blank' rel="noreferrer" className="resume-button">Get Resume  <FontAwesomeIcon icon={faDownload} /></a>
             </div>
             <div className="hamburger-menu" onClick={click}>
                 <div></div>

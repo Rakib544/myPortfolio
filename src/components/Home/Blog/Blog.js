@@ -25,13 +25,13 @@ const blogs = [
 
 const Blog = () => {
     return (
-        <section>
+        <section id="blogs">
             <Container maxWidth="lg">
                 <h2 className="text-center">My Recent Blogs</h2>
                 <Grid container>
                     {
                         blogs.map((blog, index) => (
-                            <Grid item lg={4} key={index}>
+                            <Grid item lg={4} md={4} sm={6} xs={12} key={index}>
                                 <div className="blog-container">
                                     <img src={blog.img} alt={blog.title} />
                                     <h3>{blog.title}</h3>

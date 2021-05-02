@@ -39,3 +39,9 @@
 .blog-container > button:hover {
     background-color: rgb(59, 61, 73);
 }
+
+@media (max-width: 960px) {
+    .blog-container {
+        margin: 20px 5px;
+    }
+}
