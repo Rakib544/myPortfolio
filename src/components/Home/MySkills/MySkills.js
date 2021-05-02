@@ -38,7 +38,7 @@ const MySkills = () => {
         setSkills(selectSkill)
     }
     return (
-        <section className="skill-section">
+        <section className="skill-section" id="skills">
             <Container>
                 <h2 className="text-center">My Skills</h2>
                 <div className='button-container'>
