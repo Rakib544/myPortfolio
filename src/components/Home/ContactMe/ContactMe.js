@@ -1,17 +1,21 @@
 import { Grid } from '@material-ui/core';
-import React from 'react';
+import React, { useState } from 'react';
 import './ContactMe.css';
 import emailjs from 'emailjs-com';
 
 const ContactMe = () => {
+    const [isSent, setIsSent] =  useState(false)
+    const [isClicked, setIsClicked] = useState(false)
     const sendEmail = e => {
+        setIsClicked(true)
         e.preventDefault();
-        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target, 'YOUR_USER_ID')
+        emailjs.sendForm('service_wjlaxa2', 'template_2olgdk4', e.target, 'user_R0MpxgA5bneXLqOPLfFpp')
             .then((result) => {
-                console.log(result.text);
+                setIsSent(true)
             }, (error) => {
-                console.log(error.text);
+                setIsSent(false)
             });
+        e.target.reset();
     }
     return (
         <section id="contact">
@@ -37,22 +41,24 @@ const ContactMe = () => {
                     <form onSubmit={sendEmail}>
                         <Grid container>
                             <Grid item lg={6} sm={12} xs={12}>
-                                <input className="form-control mt-3" type="text" placeholder="Entre Name" />
+                                <input className="form-control mt-3" type="text" placeholder="Entre Name" name="name" />
                             </Grid>
                             <Grid item lg={6} sm={12} xs={12}>
-                                <input className="form-control mt-3" type="text" placeholder="Entre Email" />
+                                <input className="form-control mt-3" type="text" placeholder="Entre Email" name="email" />
                             </Grid>
                         </Grid>
                         <Grid container>
                             <Grid item lg={6} sm={12} xs={12}>
-                                <input className="form-control mt-3" type="text" placeholder="Entre Number" />
+                                <input className="form-control mt-3" type="text" placeholder="Entre Number" name="number" />
                             </Grid>
                             <Grid item lg={6} sm={12} xs={12}>
-                                <input className="form-control mt-3" type="text" placeholder="Entre Subject" />
+                                <input className="form-control mt-3" type="text" placeholder="Entre Subject" name="subject" />
                             </Grid>
                         </Grid>
-                        <textarea className="form-control text-area mt-3" placeholder="Message" rows="6"></textarea>
+                        <textarea className="form-control text-area mt-3" placeholder="Message" rows="6" name="message"></textarea>
                         <button className="send-message-btn mt-3" type="submit">Submit Message</button>
+                        {isClicked && isSent && <p style={{color: 'green', textAlign: 'center', fontSize: '18px'}}>Message sent successfully</p>
+                        }
                     </form>
                 </Grid>
             </Grid>
