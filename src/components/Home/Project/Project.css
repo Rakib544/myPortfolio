@@ -1,0 +1,34 @@
+.project-container {
+    margin: 20px;
+    background-color: #2A2C39;
+    color: #fff;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+.project-container > h2 {
+    font-size: 18px;
+    padding: 5px 0 0 0;
+    text-align: center;
+}
+
+.project-container > h3 {
+    font-size: 14px;
+    padding: 10px;
+}
+
+
+.project-icon {
+    color: #fff;
+    font-size: 25px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+@media (max-width: 960px) {
+    .project-container {
+        margin: 20px 0;
+        background-color: #2A2C39;
+        color: #fff;
+        font-family: 'Poppins', 'sans-serif';
+    }
+}
