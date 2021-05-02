@@ -51,6 +51,7 @@
 
 .banner-grid-right img{
     height: 450px;
+    width: 100%;
     object-fit: contain;
 }
 

@@ -11,7 +11,7 @@ const Banner = () => {
         <Container maxWidth="lg" className="banner">
             <Grid container className="grid-container">
                 <Box clone order={{ xs: 2, sm: 1 }}>
-                    <Grid item lg={7}>
+                    <Grid item lg={7} md={7} sm={12} xs={12}>
                         <div className="banner-grid-left">
                             <h3 className="banner-title">Hello! I'm </h3>
                             <h1 className="banner-name">Rakib</h1>
@@ -22,7 +22,7 @@ const Banner = () => {
                     </Grid>
                 </Box>
                 <Box clone order={{ xs: 1, sm: 2 }}>
-                    <Grid item lg={5} className="banner-grid-right">
+                    <Grid item lg={5} md={5} sm={12} xs={12} className="banner-grid-right">
                         <img src={bannerImg} alt="bannerImg" />
                     </Grid>
                 </Box>

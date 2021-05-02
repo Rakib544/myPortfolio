@@ -5,29 +5,47 @@ import './ContactMe.css'
 const ContactMe = () => {
     return (
         <section>
-            <h2 className="text-center">Get In Touch</h2>
-            <div className="contact-container">
-                <form>
-                    <Grid container>
-                        <Grid item lg={6} sm={12} xs={12}>
-                            <input className="form-control mt-3" type="text" placeholder="Entre Name" />
+            <h1 className="text-center">Contact Me</h1>
+            <Grid container>
+                <Grid item lg={3} md={3} sm={3} xs={12}>
+                    <div className="contact-grid">
+                        <div className="contact-info">
+                            <h3>Phone:</h3>
+                            <p>01786542643</p>
+                        </div>
+                        <div className="contact-info">
+                            <h3>Email:</h3>
+                            <p>dev.rakib01@gmail.com</p>
+                        </div>
+                        <div className="contact-info">
+                            <h3>Address:</h3>
+                            <p>Dhaka, Bangladesh</p>
+                        </div>
+                    </div>
+                </Grid>
+                <Grid item lg={9} md={9} sm={9} xs={12}>
+                    <form>
+                        <Grid container>
+                            <Grid item lg={6} sm={12} xs={12}>
+                                <input className="form-control mt-3" type="text" placeholder="Entre Name" />
+                            </Grid>
+                            <Grid item lg={6} sm={12} xs={12}>
+                                <input className="form-control mt-3" type="text" placeholder="Entre Email" />
+                            </Grid>
                         </Grid>
-                        <Grid item lg={6} sm={12} xs={12}>
-                            <input className="form-control mt-3" type="text" placeholder="Entre Email" />
+                        <Grid container>
+                            <Grid item lg={6} sm={12} xs={12}>
+                                <input className="form-control mt-3" type="text" placeholder="Entre Number" />
+                            </Grid>
+                            <Grid item lg={6} sm={12} xs={12}>
+                                <input className="form-control mt-3" type="text" placeholder="Entre Subject" />
+                            </Grid>
                         </Grid>
-                    </Grid>
-                    <Grid container>
-                        <Grid item lg={6} sm={12} xs={12}>
-                            <input className="form-control mt-3" type="text" placeholder="Entre Number" />
-                        </Grid>
-                        <Grid item lg={6} sm={12} xs={12}>
-                            <input className="form-control mt-3" type="text" placeholder="Entre Subject" />
-                        </Grid>
-                    </Grid>
-                    <textarea className="form-control text-area mt-3" placeholder="Message" rows="6"></textarea>
-                    <button className="resume-button mt-3" type="submit">Submit Message</button>
-                </form>
-            </div>
+                        <textarea className="form-control text-area mt-3" placeholder="Message" rows="6"></textarea>
+                        <button className="resume-button mt-3" type="submit">Submit Message</button>
+                    </form>
+                </Grid>
+            </Grid>
         </section>
     );
 };
