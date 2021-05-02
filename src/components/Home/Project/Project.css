@@ -1,8 +1,18 @@
+.project-section {
+    padding-top: 40px;
+    margin-bottom: 80px;
+}
 .project-container {
     margin: 20px;
     background-color: #2A2C39;
     color: #fff;
     font-family: 'Poppins', 'sans-serif';
+}
+
+.project-container > img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
 }
 
 .project-container > h2 {

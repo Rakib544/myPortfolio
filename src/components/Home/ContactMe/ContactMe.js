@@ -18,7 +18,7 @@ const ContactMe = () => {
         e.target.reset();
     }
     return (
-        <section id="contact">
+        <section className="contact-section" id="contact">
             <h1 className="text-center">Contact Me</h1>
             <Grid container>
                 <Grid item lg={3} md={3} sm={3} xs={12}>

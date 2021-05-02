@@ -47,7 +47,7 @@ const portfolio = [
 
 const Project = () => {
     return (
-        <section id="projects">
+        <section className="project-section" id="projects">
             <Container maxWidth="lg">
                 <h2 className="text-center">My Portfolio</h2>
                 <Grid container>
@@ -55,7 +55,7 @@ const Project = () => {
                         portfolio.map((item, index) => (
                             <Grid item lg={4} md={6} sm={12} xs={12} key={index}>
                                 <div className="project-container">
-                                    <img src={item.img} alt={item.title} style={{ width: '100%', height: '400px', objectFit: 'contain' }} />
+                                    <img src={item.img} alt={item.title}/>
                                     <h2>{item.title}</h2>
                                     <h3>{item.subtitle}</h3>
                                     <Accordion style={{backgroundColor: '#2A2C39', color: '#fff'}}>

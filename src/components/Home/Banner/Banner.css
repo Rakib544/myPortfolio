@@ -30,10 +30,11 @@
     border: 1px solid  rgb(59, 61, 73);
     border-image: initial;
     color: #fff;
-    font-size: 18px;
+    font-size: 15px;
     cursor: pointer;
     transition: 0.4s;
     margin-bottom: 30px;
+    font-family: 'Poppins','sans-serif';
 }
 
 .resume-button:hover {
@@ -52,9 +53,9 @@
 }
 
 .banner-grid-right img{
-    height: 450px;
     width: 100%;
-    object-fit: contain;
+    height: 600px;
+    object-fit: cover;
 }
 
 @media (max-width: 960px) {

@@ -1,3 +1,7 @@
+.contact-section {
+    padding-top: 40px;
+    margin-bottom: 80px;
+}
 form {
     width: 100%;
     padding: 10px;
@@ -36,6 +40,11 @@ form {
     cursor: pointer;
     transition: 0.4s;
     margin-bottom: 30px;
+}
+
+.send-message-btn:hover, .send-message-btn:focus {
+    border: 1px solid #fff;
+    background-color: #2E303D;
 }
 
 .form-control:hover, .form-control:focus {

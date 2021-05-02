@@ -1,7 +1,7 @@
 import { Box, Container, Grid } from '@material-ui/core';
 import React from 'react';
 import './Banner.css'
-import bannerImg from '../../../images/rakib (2).png'
+import bannerImg from '../../../images/rakib-bg-2.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDownload } from '@fortawesome/free-solid-svg-icons'
 

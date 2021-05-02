@@ -25,7 +25,7 @@ const blogs = [
 
 const Blog = () => {
     return (
-        <section id="blogs">
+        <section className="blog-section" id="blogs">
             <Container maxWidth="lg">
                 <h2 className="text-center">My Recent Blogs</h2>
                 <Grid container>
