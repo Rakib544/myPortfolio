@@ -42,7 +42,7 @@ const MySkills = () => {
             <Container>
                 <h2 className="text-center">My Skills</h2>
                 <div className='button-container'>
-                    <NavLink activeStyle={active} exact to="/web" className="skills-button" onClick={() => changeShowSkills('web')}>Web</NavLink>
+                    <NavLink activeStyle={active} exact to="/" className="skills-button" onClick={() => changeShowSkills('web')}>Web</NavLink>
                     <NavLink activeStyle={active} to="/programming" className="skills-button" onClick={() => changeShowSkills('programming')}>Programming</NavLink>
                     <NavLink activeStyle={active} to="/others" className="skills-button" onClick={() => changeShowSkills('others')}>Others</NavLink>
                     <NavLink activeStyle={active} to="/tools" className="skills-button" onClick={() => changeShowSkills('tools')}>Tools</NavLink>
