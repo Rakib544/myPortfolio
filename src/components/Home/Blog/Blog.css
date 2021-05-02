@@ -1,0 +1,41 @@
+.blog-container {
+    margin: 20px 10px;
+    background-color: #2A2C39;
+    color: #fff;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+.blog-container > img {
+    width: 100%;
+    height: 300px;
+}
+
+.blog-container > h3 {
+    font-size: 18px;
+    text-align: center;
+}
+
+.blog-container > p {
+    font-size: 14px;
+    margin: 10px 0;
+    padding: 0 10px;
+}
+
+.blog-container > button {
+    height: 45px;
+    line-height: 40px;
+    padding: 0 30px 0 30px;
+    border-radius: 43.5px;
+    background-color: #252734;
+    border: 1px solid #2E303D;
+    border-image: initial;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.4s;
+    margin: 10px;
+}
+
+.blog-container > button:hover {
+    background-color: rgb(59, 61, 73);
+}
