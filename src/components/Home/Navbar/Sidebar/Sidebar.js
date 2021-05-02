@@ -1,4 +1,3 @@
-import { Link } from '@material-ui/core';
 import React from 'react';
 import './Sidebar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -12,16 +11,16 @@ const Sidebar = ({ show, click }) => {
         sideDrawerClass.push('show')
     }
     return (
-        <div className={`${sideDrawerClass.join(' ')}`}>
+        <div className={`${sideDrawerClass.join(' ')}`} style={{zIndex: '10000'}}>
             <div className="cross-btn" onClick={click}>
                 <FontAwesomeIcon icon={faTimes} />
             </div>
             <ul className="sidebar-links" onClick={click}>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/about">About</Link></li>
-                <li><Link to="/projects">Projects</Link></li>
-                <li><Link to="/blog">Blog</Link></li>
-                <li><Link to="/contact">Contact</Link></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#home">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#blogs">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
             <div className="menu-icons">
                 <a href='https://www.facebook.com/profile.php?id=100018966190023' target="_blank" rel="noreferrer" className="menu-icon"><FontAwesomeIcon className="s-icon" icon={faFacebookF} /></a>
