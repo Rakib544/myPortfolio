@@ -1,18 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Navbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDownload } from '@fortawesome/free-solid-svg-icons'
 
 const Navbar = ({ click }) => {
+    const [changeNavColor, setChangeNavColor] = useState(false)
+    window.addEventListener('scroll', () => {
+        if(window.scrollY > 110) {
+            setChangeNavColor(true)
+        } else {
+            setChangeNavColor(false)
+        }
+    })
+
     return (
-        <nav className="navbar" style={{position: 'fixed', zIndex: '1000'}}>
+        <nav className={changeNavColor ? 'navbar-active' : 'navbar'}>
             <div className="navbar-link">
                 <h2>Rakib</h2>
             </div>
             <ul className="navbar-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#blogs">Blogs</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>

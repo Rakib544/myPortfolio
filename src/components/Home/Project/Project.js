@@ -47,7 +47,7 @@ const portfolio = [
 
 const Project = () => {
     return (
-        <section className="project-section" id="projects">
+        <section className="project-section" id="portfolio">
             <Container maxWidth="lg">
                 <h2 className="text-center">My Portfolio</h2>
                 <Grid container>

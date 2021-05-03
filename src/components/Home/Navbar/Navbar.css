@@ -6,6 +6,20 @@
     align-items: center;
     background-color: #252734;
     padding: 1.5rem 2rem;
+    position: fixed;
+    z-index: 1000;
+}
+
+.navbar-active {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 110px;
+    align-items: center;
+    background-color: #2A2C39;
+    padding: 1.5rem 2rem;
+    position: fixed;
+    z-index: 1000;
 }
 
 .navbar-link h2 {

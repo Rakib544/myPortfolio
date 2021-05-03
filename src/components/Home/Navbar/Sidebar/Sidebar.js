@@ -16,10 +16,9 @@ const Sidebar = ({ show, click }) => {
                 <FontAwesomeIcon icon={faTimes} />
             </div>
             <ul className="sidebar-links" onClick={click}>
-                <li><a href="#home">Home</a></li>
                 <li><a href="#home">About</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#blogs">Blog</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
