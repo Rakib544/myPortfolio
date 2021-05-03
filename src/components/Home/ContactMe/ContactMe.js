@@ -21,7 +21,7 @@ const ContactMe = () => {
         <section className="contact-section" id="contact">
             <h1 className="text-center">Contact Me</h1>
             <Grid container>
-                <Grid item lg={3} md={3} sm={3} xs={12}>
+                <Grid item lg={3} md={3} sm={5} xs={12}>
                     <div className="contact-grid">
                         <div className="contact-info">
                             <h3>Phone:</h3>
@@ -37,7 +37,7 @@ const ContactMe = () => {
                         </div>
                     </div>
                 </Grid>
-                <Grid item lg={9} md={9} sm={9} xs={12}>
+                <Grid item lg={9} md={9} sm={7} xs={12}>
                     <form onSubmit={sendEmail}>
                         <Grid container>
                             <Grid item lg={6} sm={12} xs={12}>

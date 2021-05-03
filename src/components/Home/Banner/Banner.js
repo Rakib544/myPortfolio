@@ -8,9 +8,9 @@ import { faDownload } from '@fortawesome/free-solid-svg-icons'
 
 const Banner = () => {
     return (
-        <Container maxWidth="lg" className="banner" id="home">
+        <Container maxWidth="lg" className="banner" id="about">
             <Grid container className="grid-container">
-                <Box clone order={{ xs: 2, sm: 1 }}>
+                <Box clone order={{ xs: 2, sm: 2, md: 1 }}>
                     <Grid item lg={7} md={7} sm={12} xs={12}>
                         <div className="banner-grid-left">
                             <h3 className="banner-title">Hello! I'm </h3>
@@ -21,7 +21,7 @@ const Banner = () => {
                         </div>
                     </Grid>
                 </Box>
-                <Box clone order={{ xs: 1, sm: 2 }}>
+                <Box clone order={{ xs: 1, sm: 1, md: 2 }}>
                     <Grid item lg={5} md={5} sm={12} xs={12} className="banner-grid-right">
                         <img src={bannerImg} alt="bannerImg" />
                     </Grid>
