@@ -6,7 +6,6 @@ import Sidebar from './components/Home/Navbar/Sidebar/Sidebar';
 import Backdrop from './components/Home/Navbar/Backdrop/Backdrop';
 
 import './App.css'
-import NotFound from './components/NotFound/NotFound';
 
 const App = () => {
   const [toggleSlide, setToggleSlide] = useState(false)
@@ -18,18 +17,6 @@ const App = () => {
         <Switch>
           <Route path="/">
             <Home />
-          </Route>
-          <Route path="/about">
-
-          </Route>
-          <Route path="/projects">
-
-          </Route>
-          <Route path="/blog">
-
-          </Route>
-          <Route path="*">
-            <NotFound />
           </Route>
         </Switch>
       </BrowserRouter>
