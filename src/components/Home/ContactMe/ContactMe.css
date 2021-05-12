@@ -50,6 +50,7 @@ form {
 
 .form-control:hover, .form-control:focus {
     border: 1px solid #fff;
+    color: #fff;
 }
 
 @media (max-width: 960px) {
@@ -86,3 +87,25 @@ form {
     font-size: 15px;
 }
 
+.btn-block {
+    display: block;
+}
+
+.validation-error {
+    color: red;
+    font-family: 'Poppins', sans-serif;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #fff;
+  border: 1px solid rgb(59, 61, 73);
+  color: #fff;
+}

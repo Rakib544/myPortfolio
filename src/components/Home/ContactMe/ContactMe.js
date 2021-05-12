@@ -7,28 +7,26 @@ import { useForm } from "react-hook-form";
 const ContactMe = () => {
     const [isSent, setIsSent] = useState(false)
     const [isClicked, setIsClicked] = useState(false)
-    const [isValidate, setIsValidate] = useState(false)
 
-    const { register, handleSubmit, watch, errors } = useForm();
+    const { register, handleSubmit, errors } = useForm();
 
-    const onSubmit = (data) => {
-        console.log(data)
+    const onSubmit = (data, e) => {
+        sendEmail(e)
     }
 
-    // const sendEmail = e => {
-    //     setIsClicked(true)
-    //     e.preventDefault();
-    //     if (isValidate) {
-    //         emailjs.sendForm('service_wjlaxa2', 'template_2olgdk4', e.target, 'user_R0MpxgA5bneXLqOPLfFpp')
-    //             .then((result) => {
-    //                 setIsSent(true)
-    //             }, (error) => {
-    //                 setIsSent(false)
-    //             });
-    //         e.target.reset();
-    //     }
-    //     setIsValidate(false)
-    // }
+    const sendEmail = e => {
+        setIsClicked(true)
+        e.preventDefault();
+
+        emailjs.sendForm('service_wjlaxa2', 'template_2olgdk4', e.target, 'user_R0MpxgA5bneXLqOPLfFpp')
+            .then((result) => {
+                setIsSent(true)
+            }, (error) => {
+                setIsSent(false)
+            });
+        e.target.reset();
+    }
+
     return (
         <section className="contact-section" id="contact">
             <h1 className="text-center">Contact Me</h1>
@@ -53,27 +51,27 @@ const ContactMe = () => {
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <Grid container>
                             <Grid item lg={6} sm={12} xs={12}>
-                                <input ref={register({required: true})} className="form-control mt-3" type="text" placeholder="Entre Name" name="name" />
-                                {errors.name && <span>This field is required</span>}
+                                <input ref={register({ required: true })} className="form-control mt-3" type="text" placeholder="Entre Name" name="name" />
+                                {errors.name && <span className="validation-error">This field is required</span>}
                             </Grid>
                             <Grid item lg={6} sm={12} xs={12}>
-                                <input ref={register({required: true})} className="form-control mt-3" type="text" placeholder="Entre Email" name="email" />
-                                {errors.email && <span>This field is required</span>}
+                                <input ref={register({ required: true })} className="form-control mt-3" type="text" placeholder="Entre Email" name="email" />
+                                {errors.email && <span className="validation-error">This field is required</span>}
                             </Grid>
                         </Grid>
                         <Grid container>
                             <Grid item lg={6} sm={12} xs={12}>
-                                <input ref={register({required: true})} className="form-control mt-3" type="text" placeholder="Entre Number" name="number" />
-                                {errors.number && <span>This field is required</span>}
+                                <input ref={register({ required: true })} className="form-control mt-3" type="text" placeholder="Entre Number" name="number" />
+                                {errors.number && <span className="validation-error">This field is required</span>}
                             </Grid>
                             <Grid item lg={6} sm={12} xs={12}>
-                                <input ref={register({required: true})} className="form-control mt-3" type="text" placeholder="Entre Subject" name="subject" />
-                                {errors.exampleRequired && <span>This field is required</span>}
+                                <input ref={register({ required: true })} className="form-control mt-3" type="text" placeholder="Entre Subject" name="subject" />
+                                {errors.subject && <span className="validation-error">This field is required</span>}
                             </Grid>
                         </Grid>
-                        <textarea ref={register({required: true})} className="form-control text-area mt-3" placeholder="Message" rows="6" name="message"></textarea>
-                        {errors.message && <span>This field is required</span>}
-                        <button className="send-message-btn mt-3" type="submit">Submit Message</button>
+                        <textarea ref={register({ required: true })} className="form-control text-area mt-3" placeholder="Message" rows="6" name="message"></textarea>
+                        {errors.message && <span className="validation-error">This field is required</span>}
+                        <button className="send-message-btn mt-3 btn-block" type="submit">Submit Message</button>
                         {isClicked && isSent && <p style={{ color: 'green', textAlign: 'center', fontSize: '18px' }}>Message sent successfully</p>
                         }
                     </form>
