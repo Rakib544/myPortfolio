@@ -2,21 +2,33 @@ import { Grid } from '@material-ui/core';
 import React, { useState } from 'react';
 import './ContactMe.css';
 import emailjs from 'emailjs-com';
+import { useForm } from "react-hook-form";
 
 const ContactMe = () => {
-    const [isSent, setIsSent] =  useState(false)
+    const [isSent, setIsSent] = useState(false)
     const [isClicked, setIsClicked] = useState(false)
-    const sendEmail = e => {
-        setIsClicked(true)
-        e.preventDefault();
-        emailjs.sendForm('service_wjlaxa2', 'template_2olgdk4', e.target, 'user_R0MpxgA5bneXLqOPLfFpp')
-            .then((result) => {
-                setIsSent(true)
-            }, (error) => {
-                setIsSent(false)
-            });
-        e.target.reset();
+    const [isValidate, setIsValidate] = useState(false)
+
+    const { register, handleSubmit, watch, errors } = useForm();
+
+    const onSubmit = (data) => {
+        console.log(data)
     }
+
+    // const sendEmail = e => {
+    //     setIsClicked(true)
+    //     e.preventDefault();
+    //     if (isValidate) {
+    //         emailjs.sendForm('service_wjlaxa2', 'template_2olgdk4', e.target, 'user_R0MpxgA5bneXLqOPLfFpp')
+    //             .then((result) => {
+    //                 setIsSent(true)
+    //             }, (error) => {
+    //                 setIsSent(false)
+    //             });
+    //         e.target.reset();
+    //     }
+    //     setIsValidate(false)
+    // }
     return (
         <section className="contact-section" id="contact">
             <h1 className="text-center">Contact Me</h1>
@@ -38,26 +50,31 @@ const ContactMe = () => {
                     </div>
                 </Grid>
                 <Grid item lg={9} md={9} sm={7} xs={12}>
-                    <form onSubmit={sendEmail}>
+                    <form onSubmit={handleSubmit(onSubmit)}>
                         <Grid container>
                             <Grid item lg={6} sm={12} xs={12}>
-                                <input className="form-control mt-3" type="text" placeholder="Entre Name" name="name" />
+                                <input ref={register({required: true})} className="form-control mt-3" type="text" placeholder="Entre Name" name="name" />
+                                {errors.name && <span>This field is required</span>}
                             </Grid>
                             <Grid item lg={6} sm={12} xs={12}>
-                                <input className="form-control mt-3" type="text" placeholder="Entre Email" name="email" />
+                                <input ref={register({required: true})} className="form-control mt-3" type="text" placeholder="Entre Email" name="email" />
+                                {errors.email && <span>This field is required</span>}
                             </Grid>
                         </Grid>
                         <Grid container>
                             <Grid item lg={6} sm={12} xs={12}>
-                                <input className="form-control mt-3" type="text" placeholder="Entre Number" name="number" />
+                                <input ref={register({required: true})} className="form-control mt-3" type="text" placeholder="Entre Number" name="number" />
+                                {errors.number && <span>This field is required</span>}
                             </Grid>
                             <Grid item lg={6} sm={12} xs={12}>
-                                <input className="form-control mt-3" type="text" placeholder="Entre Subject" name="subject" />
+                                <input ref={register({required: true})} className="form-control mt-3" type="text" placeholder="Entre Subject" name="subject" />
+                                {errors.exampleRequired && <span>This field is required</span>}
                             </Grid>
                         </Grid>
-                        <textarea className="form-control text-area mt-3" placeholder="Message" rows="6" name="message"></textarea>
+                        <textarea ref={register({required: true})} className="form-control text-area mt-3" placeholder="Message" rows="6" name="message"></textarea>
+                        {errors.message && <span>This field is required</span>}
                         <button className="send-message-btn mt-3" type="submit">Submit Message</button>
-                        {isClicked && isSent && <p style={{color: 'green', textAlign: 'center', fontSize: '18px'}}>Message sent successfully</p>
+                        {isClicked && isSent && <p style={{ color: 'green', textAlign: 'center', fontSize: '18px' }}>Message sent successfully</p>
                         }
                     </form>
                 </Grid>
