@@ -39,7 +39,7 @@
 .project-section .swiper-button-prev:hover::after, .project-section .swiper-button-next:hover::after {
     color: #fff;
     padding: 10px;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0,0,0,0.8);
     border-radius: 5px;
 }
 
