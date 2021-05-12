@@ -51,6 +51,8 @@
 
 .navbar-links > li > a:hover {
     color: #fff;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .nav-btn {

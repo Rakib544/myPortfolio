@@ -49,6 +49,10 @@
     text-transform: uppercase;
 }
 
+.sidebar-links > li > a:hover {
+    text-decoration: none;
+}
+
 @media (min-width: 960px) {
     .side-drawer {
         display: none;
