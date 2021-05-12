@@ -1,6 +1,5 @@
 .blog-section {
-   margin-top: 100px;
-   padding-top: 100px;
+   padding-top: 30px;
    margin-bottom: 30px;
 }
 .blog-container {
@@ -26,19 +25,21 @@
     padding: 0 10px;
 }
 
-.blog-container > button {
+.blog-container > a{
     height: 45px;
-    line-height: 40px;
+    line-height: 45px;
+    display: inline-block;
     padding: 0 30px 0 30px;
     border-radius: 43.5px;
-    background-color: #252734;
-    border: 1px solid #2E303D;
+    background-color:  #2E303D;
+    border: 1px solid #fff;
     border-image: initial;
     color: #fff;
     font-size: 15px;
     cursor: pointer;
     transition: 0.4s;
     margin: 10px;
+    text-decoration: none;
 }
 
 .blog-container > button:hover {
@@ -50,3 +51,8 @@
         margin: 20px 5px;
     }
 }
+
+.all-blog-button {
+    display: block;
+    margin: 30px auto; 
+} 
