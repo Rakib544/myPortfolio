@@ -15,6 +15,11 @@
     object-fit: cover;
 }
 
+.reviewer-img {
+    width: 100%;
+    object-fit: contain;
+}
+
 .project-container > h2 {
     font-size: 18px;
     padding: 5px 0 0 0;

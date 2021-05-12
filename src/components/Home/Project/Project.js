@@ -1,49 +1,16 @@
 import { Accordion, AccordionDetails, AccordionSummary, Container, Grid } from '@material-ui/core';
 import React from 'react';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import yacht from '../../../images/yacht-service.png';
-import theGem from '../../../images/theGem.png';
-import anytimeBuys from '../../../images/anytime-buys.png';
 import './Project.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { portfolio } from './ProjectData';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper-bundle.min.css';
+import SwiperCore, { Navigation, Scrollbar, A11y, Pagination, Autoplay } from 'swiper';
+SwiperCore.use([Navigation, Scrollbar, A11y, Pagination, Autoplay]);
 
-const portfolio = [
-    {
-        img: yacht,
-        title: 'Yacht Rental Service',
-        subtitle: 'A rental service website where user can rent yacht with different packages.',
-        feature1: 'Admin can add and delete service',
-        feature2: 'User can order service',
-        feature3: 'User can write review',
-        technology: 'React Js, Node Js, MongoDB, Express Js, React Router DOM, Firebase Authentication',
-        repo: 'https://github.com/Rakib544/yatch-service-application-client',
-        liveSite: 'https://yacht-rental-service.web.app/'
-    },
-    {
-        img: theGem,
-        title: 'TheGem',
-        subtitle: 'A restaurant website where user can order food and payment here',
-        feature1: 'Admin can food and delete service',
-        feature2: 'User can order food',
-        feature3: 'User can increase and decrease selected food quantity.',
-        technology: 'React Js, Node Js, MongoDB, Express Js, React Router DOM, Firebase Authentication',
-        repo: 'https://github.com/Rakib544/TheGem',
-        liveSite: 'https://thegem-5d710.web.app/'
-    },
-    {
-        img: anytimeBuys,
-        title: 'Anytime-Buy',
-        subtitle: 'An e-commerce website where user can order products',
-        feature1: 'Admin can add and delete products',
-        feature2: 'User can order product',
-        feature3: 'User can login with firebase authentication',
-        technology: 'React Js, Node Js, MongoDB, Express Js, React Router DOM, Firebase Authentication',
-        repo: 'https://github.com/Rakib544/anytime-buys-clinet',
-        liveSite: 'https://anytime-buys.web.app/'
-    },
-]
 
 const Project = () => {
     return (
@@ -55,10 +22,30 @@ const Project = () => {
                         portfolio.map((item, index) => (
                             <Grid item lg={4} md={6} sm={12} xs={12} key={index}>
                                 <div className="project-container">
-                                    <img src={item.img} alt={item.title}/>
+                                    <Swiper
+                                        spaceBetween={50}
+                                        slidesPerView={1}
+                                        navigation
+                                        autoplay={{ delay: 2000 }}
+                                        pagination={{ clickable: true }}
+                                        onSwiper={(swiper) => console.log(swiper)}
+                                        onSlideChange={() => console.log('slide change')}
+                                    >
+                                        {
+                                            item.img && item.img.map(img => (
+                                                <SwiperSlide>
+                                                    <div className="text-container">
+                                            
+                                                        <img src={img} alt="img" className="reviewer-img" />
+                                                        
+                                                    </div>
+                                                </SwiperSlide>
+                                            ))
+                                        }
+                                    </Swiper>
                                     <h2>{item.title}</h2>
                                     <h3>{item.subtitle}</h3>
-                                    <Accordion style={{backgroundColor: '#2A2C39', color: '#fff'}}>
+                                    <Accordion style={{ backgroundColor: '#2A2C39', color: '#fff' }}>
                                         <AccordionSummary
                                             expandIcon={<ExpandMoreIcon style={{ color: '#fff' }} />}
                                             aria-controls="panel1a-content"
