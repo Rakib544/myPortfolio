@@ -14,9 +14,9 @@
     height: 300px;
 }
 
-.blog-container > h3 {
-    font-size: 18px;
-    text-align: center;
+.blog-container > h4 {
+    font-size: 16px;
+    padding: 10px;
 }
 
 .blog-container > p {

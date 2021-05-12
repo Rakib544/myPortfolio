@@ -27,10 +27,10 @@ const Navbar = ({ click }) => {
         window.scrollTo(0,1300)
     }
     const goToBlogPage = () => {
-        window.scrollTo(0, 1900)
+        window.scrollTo(0, 1830)
     }
     const goToContactPage = () => {
-        window.scrollTo(0,2600)
+        window.scrollTo(0,2540)
     }
 
     return (
