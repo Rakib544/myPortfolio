@@ -48,7 +48,7 @@ const ContactMe = () => {
                     </div>
                 </Grid>
                 <Grid item lg={9} md={9} sm={7} xs={12}>
-                    <form onSubmit={handleSubmit(onSubmit)}>
+                    <form autocomplete="off" onSubmit={handleSubmit(onSubmit)}>
                         <Grid container>
                             <Grid item lg={6} sm={12} xs={12}>
                                 <input ref={register({ required: true })} className="form-control mt-3" type="text" placeholder="Entre Name" name="name" />
