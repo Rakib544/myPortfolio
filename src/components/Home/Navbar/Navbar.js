@@ -15,6 +15,10 @@ const Navbar = ({ click }) => {
         }
     })
 
+    const goToAboutPage = () => {
+        window.scrollTo(0, 10)
+    }
+
     const goToSkill = () => {
         window.scrollTo(0, 600)
     }
@@ -26,7 +30,7 @@ const Navbar = ({ click }) => {
         window.scrollTo(0, 1900)
     }
     const goToContactPage = () => {
-        window.scrollTo(0,2500)
+        window.scrollTo(0,2600)
     }
 
     return (
@@ -35,7 +39,7 @@ const Navbar = ({ click }) => {
                 <h2>Rakib</h2>
             </div>
             <ul className="navbar-links">
-                <li><a href="#about">About</a></li>
+                <li><Link onClick={goToAboutPage}>About</Link></li>
                 <li><Link onClick={goToSkill}>Skills</Link></li>
                 <li><Link onClick={goToPortfolio}>Portfolio</Link></li>
                 <li><Link onClick={goToBlogPage}>Blogs</Link></li>

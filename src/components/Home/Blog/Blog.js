@@ -8,8 +8,8 @@ const Blog = () => {
     const [blogs, setBlogs] = useState([]);
     useEffect(() => {
         fetch(`https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@dev-rakib`)
-        .then(res => res.json())
-        .then(data => setBlogs(data.items.slice(0,3)))
+            .then(res => res.json())
+            .then(data => setBlogs(data.items.slice(0, 3)))
     }, [])
     console.log(blogs)
     return (
@@ -30,7 +30,9 @@ const Blog = () => {
                         ))
                     }
                 </Grid>
-                <button className="resume-button all-blog-button">View All Blogs</button>
+                <div className="all-blogs-btn-container">
+                    <a href="https://dev-rakib.medium.com/" target="_blank" rel="noreferrer" className="all-blog-button">View All Blogs</a>
+                </div>
             </Container>
         </section>
     );

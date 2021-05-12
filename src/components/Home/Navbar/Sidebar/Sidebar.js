@@ -12,10 +12,14 @@ const Sidebar = ({ show, click }) => {
         sideDrawerClass.push('show')
     }
 
+    const goToAboutPage = () => {
+        window.scrollTo(0, 10)
+    }
+
     const goToSkill = () => {
         window.scrollTo(0, 900)
     }
-    
+
     const goToPortfolio = () => {
         window.scrollTo(0, 1900)
     }
@@ -23,16 +27,16 @@ const Sidebar = ({ show, click }) => {
         window.scrollTo(0, 3500)
     }
     const goToContactPage = () => {
-        window.scrollTo(0,2500)
+        window.scrollTo(0, 5150)
     }
 
     return (
-        <div className={`${sideDrawerClass.join(' ')}`} style={{zIndex: '10000'}}>
+        <div className={`${sideDrawerClass.join(' ')}`} style={{ zIndex: '10000' }}>
             <div className="cross-btn" onClick={click}>
                 <FontAwesomeIcon icon={faTimes} />
             </div>
             <ul className="sidebar-links" onClick={click}>
-                <li><Link>About</Link></li>
+                <li><Link onClick={goToAboutPage}>About</Link></li>
                 <li><Link onClick={goToSkill}>Skills</Link></li>
                 <li><Link onClick={goToPortfolio}>Portfolio</Link></li>
                 <li><Link onClick={goToBlogPage}>Blog</Link></li>

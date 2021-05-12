@@ -25,7 +25,7 @@
     padding: 0 10px;
 }
 
-.blog-container > a{
+.blog-container > a, .all-blog-button{
     height: 45px;
     line-height: 45px;
     display: inline-block;
@@ -52,7 +52,7 @@
     }
 }
 
-.all-blog-button {
-    display: block;
-    margin: 30px auto; 
-} 
+.all-blogs-btn-container {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+}
