@@ -13,11 +13,14 @@ import gem4 from '../../../images/gem-4.png';
 import gem5 from '../../../images/gem-6.png';
 import gem6 from '../../../images/gem-8.png';
 
-import anytimes1 from '../../../images/anytimes-1.png';
-import anytimes2 from '../../../images/anytimes-2.png';
-import anytimes3 from '../../../images/anytimes-3.png';
-import anytimes4 from '../../../images/anytimes-4.png';
+// import anytimes1 from '../../../images/anytimes-1.png';
+// import anytimes2 from '../../../images/anytimes-2.png';
+// import anytimes3 from '../../../images/anytimes-3.png';
+// import anytimes4 from '../../../images/anytimes-4.png';
 
+import app1 from '../../../images/app-1.png';
+import app2 from '../../../images/app-2.png';
+import app3 from '../../../images/app-3.png';
 export const portfolio = [
     {
         img: [yacht1, yacht2, yacht3, yacht4, yacht6, yacht7, yacht8],
@@ -42,14 +45,14 @@ export const portfolio = [
         liveSite: 'https://thegem-5d710.web.app/'
     },
     {
-        img: [anytimes1, anytimes2, anytimes3, anytimes4],
-        title: 'Anytime-Buy',
-        subtitle: 'An e-commerce website where user can order products',
-        feature1: 'Admin can add and delete products',
-        feature2: 'User can order product',
-        feature3: 'User can login with firebase authentication',
-        technology: 'React Js, Node Js, MongoDB, Express Js, React Router DOM, Firebase Authentication',
-        repo: 'https://github.com/Rakib544/anytime-buys-clinet',
-        liveSite: 'https://anytime-buys.web.app/'
+        img: [app1, app2, app3],
+        title: 'The-Blog',
+        subtitle: 'A cross platform application developed with react-native',
+        feature1: 'Implemented routing system using react-navigation',
+        feature2: 'Implemented functionality that a user can see blog details after click on blog',
+        feature3: 'Implemented bookmark and like functionality',
+        technology: 'React-Native, React-Navigation',
+        repo: 'https://github.com/Rakib544/The-Blog-App',
+        liveSite: 'https://youtu.be/cMB8i1N_gJc'
     },
 ]
